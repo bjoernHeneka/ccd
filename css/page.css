@@ -1,0 +1,11 @@
+.box{
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.white{
+    background: rgb(255,255,255,.7);
+}
+.dark{
+    background: rgb(0,0,0,.7);
+}

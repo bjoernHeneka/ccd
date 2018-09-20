@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/moon.css">
+    <link rel="stylesheet" href="../css/page.css">
+
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+
+
+        <!-- START -->
+        <section data-markdown data-background-image="images/ai-art-big-data-158826.jpg" class="box dark">
+            <textarea data-template>
+                # Der Rote Grad
+
+
+                *by Björn Heneka*
+
+            </textarea>
+        </section>
+
+        <!-- Prinzipien -->
+        <section data-markdown>
+            <textarea data-template>
+                ## Prinzipien
+
+                * <p class="fragment" data-fragment-index="1">Don't repeat yourself (DRY)</p>
+                * <p class="fragment" data-fragment-index="2">Keep it simple, stupid (KISS)</p>
+                * <p class="fragment" data-fragment-index="3">Beware of optimisation</p>
+                * <p class="fragment" data-fragment-index="4">Favour Composition over Inheritance (FCoI)</p>
+                * <p class="fragment" data-fragment-index="5">Integration Operation Segregation Principle (IOSP)</p>
+            </textarea>
+        </section>
+
+        <!-- Techniken -->
+        <section data-markdown>
+            <textarea data-template>
+                ## Praktiken
+
+                * <p class="fragment" data-fragment-index="1">The Boyscout rule</p>
+                * <p class="fragment" data-fragment-index="2">Root Cause Analysis</p>
+                * <p class="fragment" data-fragment-index="3">Ein Versionskontrollsystem einsetzen</p>
+                * <p class="fragment" data-fragment-index="4">Einfache Refaktorisierungsmuster anwenden</p>
+                * <p class="fragment" data-fragment-index="5">Täglich reflektieren</p>
+            </textarea>
+        </section>
+
+        <!-- Prinzipien -->
+        <section data-markdown data-background-image="images/ai-codes-coding-247791.jpg" class="dark box">
+            <textarea data-template>
+                # Prinzipien
+            </textarea>
+        </section>
+
+        <!-- DRY -->
+        <section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Don't repeat yourself (DRY)
+                    *<p class="fragment" data-fragment-index="1">Jede Doppelung von Code oder auch nur Handgriffen leistet Inkonsistenzen und Fehlern Vorschub.</p>*
+                </textarea>
+            </section>
+            <section data-markdown="dry/bad.md">
+            </section>
+            <section data-markdown="dry/good.md">
+            </section>
+        </section>
+
+        <!-- KISS -->
+        <section>
+            <section data-markdown>
+            <textarea data-template>
+                ## Keep it simple, stupid (KISS)
+                *<p class="fragment" data-fragment-index="1">Alles sollte so einfach wie möglich gemacht werden, aber nicht einfacher.</p>*
+                <p class="fragment" data-fragment-index="1"> <small>Albert Einstein</small></p>
+            </textarea>
+            </section>
+            <section data-markdown="kiss/bad.md">
+            </section>
+            <section data-markdown="kiss/good.md">
+            </section>
+        </section>
+
+        <!-- Beware of optimisation -->
+        <section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Vorsicht vor Optimierungen!
+                    *<p class="fragment" data-fragment-index="1">Optimierungen kosten immer viel Aufwand. Wer Vorsicht walten lässt, spart oft wertvolle Ressourcen für das, was dem Kunden wirklich nützt.</p>*
+                </textarea>
+            </section>
+            <section data-markdown  data-background-image="images/daylight-equipment-hanging-147430.jpg" class="box dark" >
+                <textarea data-template>
+                    ## Regeln für die Optimierung
+                    1. <p class="fragment" data-fragment-index="1">Lass es</p>
+                    2. <p class="fragment" data-fragment-index="2">Nein im Ernst... lass es</p>
+                    <aside data-markdown class="notes">
+                        - Refactoring ist nich optimiereung
+                        - Sei dir wirklich sicher wenn du es doch amchst
+                        - Bringt es wirklich was?
+                    </aside>
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Favour Composition over Inheritance (FCoI) -->
+        <section>
+            <section data-markdown>
+            <textarea data-template>
+                ## Favour Composition over Inheritance (FCoI)
+                *<p class="fragment" data-fragment-index="1">Komposition fördert die lose Kopplung und die Testbarkeit eines Systems und ist oft flexibler.</p>*
+            </textarea>
+            </section>
+            <section data-markdown="FCoI/bad.md">
+            </section>
+            <section data-markdown="FCoI/good.md">
+            </section>
+        </section>
+
+        <!-- Integration Operation Segregation Principle (IOSP) -->
+        <section>
+            <section data-markdown>
+            <textarea data-template>
+                ## Integration Operation Segregation Principle (IOSP)
+                *<p class="fragment" data-fragment-index="1">Ein deutliches Symptom schlecht wandelbaren Codes sind tiefe Hierarchien funktionaler Abhängigkeit. Sie reduzieren die Verständlichkeit und erschweren automatisierte Tests wie Refactoring.</p>*
+                <aside data-markdown class="notes">
+                    - Methoden aufteilen nach Operationen und Integrationen
+                    - Operation = Logik wie API call, Daten verarbeten,
+                    Manipulation etc
+                    - Integration Keine eigene logik, Nur Aufruf anderer methoden
+
+                    Vorteile:
+                    TEstbarkeit der operationen,
+                    Lesbarkeit, Erweiterbarkeit
+                    Muss nur auf Reihenfolge geachtet werden
+                </aside>
+            </textarea>
+            </section>
+            <section data-markdown="iosp/bad.md">
+            </section>
+            <section data-markdown="iosp/good.md">
+            </section>
+        </section>
+
+        <!-- Praktiken -->
+        <section data-markdown data-background-image="images/ai-codes-coding-247791.jpg" class="dark box">
+            <textarea data-template>
+                # Praktiken
+            </textarea>
+        </section>
+
+        <!-- Boyscout Rule -->
+        <section>
+            <section data-markdown data-background-image="images/boy-child-childhood-346796.jpg" class="box dark">
+                <textarea data-template>
+                    ## Be a Boyscout
+                    *<p class="fragment" data-fragment-index="1">Jede Beschäftigung mit einem Gegenstand macht ihn zumindest ein klein wenig besser. Ganz ohne bürokratische Planung. Fundament und Graswurzelansatz für mehr Qualität.</p>*
+                </textarea>
+            </section>
+            <section data-markdown="boyscout/bad.md">
+            </section>
+            <section data-markdown="boyscout/good.md">
+            </section>
+        </section>
+
+        <!-- Root Cause Analyses -->
+        <section>
+            <section data-markdown data-background-image="images/black-and-white-forest-grass-450100.jpg" class="box dark">
+                <textarea data-template>
+                    ## Root Cause Analysis
+                    *<p class="fragment" data-fragment-index="1">Symptome behandeln bringt vielleicht schnell eine Linderung – langfristig kostet es aber mehr Aufwand. Wer stattdessen unter die Oberfläche von Problemen schaut, arbeitet am Ende effizenter.</p>*
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Use VCS -->
+        <section>
+            <section data-markdown data-background-image="images/adult-business-communication-1181253.jpg" class="box dark">
+                <textarea data-template>
+                    ## Ein Versionskontrollsystem einsetzen
+                    *<p class="fragment" data-fragment-index="1">Angst vor Beschädigung eines „running system“ lähmt die Softwareentwicklung. Mit einer Versionsverwaltung ist solche Angst unbegründet. Die Entwicklung kann schnell und mutig voranschreiten.</p>*
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Simple refactorings -->
+        <section>
+            <section data-markdown data-background-image="images/refactoring_poster-r723da0bee0b0423799654d8a59350032_i5v9b_8byvr_1024.jpg" class="box dark">
+                <textarea data-template>
+                    ## Einfache Refaktorisierungsmuster anwenden
+                </textarea>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Beispiele
+
+                    * <p class="fragment" data-fragment-index="1">Methoden extrahieren</p>
+                    * <p class="fragment" data-fragment-index="2">Umbenennungen</p>
+                    * <p class="fragment" data-fragment-index="3">Werkzeuge der IDE nutzen</p>
+
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Reflect daily -->
+        <section>
+            <section data-markdown data-background-image="images/animal-animal-photography-blurred-background-1207875.jpg" class="box dark">
+                <textarea data-template>
+                    ## Täglich reflektieren
+                    *<p class="fragment" data-fragment-index="1">Keine Verbesserung, kein Fortschritt, kein Lernen ohne Reflexion. Aber nur, wenn Reflexion auch eingeplant wird, findet sie unter dem Druck des Tagesgeschäftes auch statt.</p>*
+                </textarea>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Tägliche Fragen
+
+                    * <p class="fragment" data-fragment-index="1">Habe ich alle meine Aufgaben erledigt?</p>
+                    * <p class="fragment" data-fragment-index="2">Wie habe ich meine Aufgaben erledigt?</p>
+                    * <p class="fragment" data-fragment-index="3">Habe ich alle Prinzipen eingehalten?</p>
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Thx -->
+        <section data-markdown data-background-image="images/advertisement-advertising-font-519.jpg">
+        </section>
+
+    </div>
+</div>
+
+<script src="../reveal.js/lib/js/head.min.js"></script>
+<script src="../reveal.js/js/reveal.js"></script>
+
+<script>
+    Reveal.initialize({
+        dependencies: [
+            {src: '../reveal.js/plugin/markdown/marked.js'},
+            {src: '../reveal.js/plugin/markdown/markdown.js'},
+            {src: '../reveal.js/plugin/notes/notes.js', async: true},
+            {
+                src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>

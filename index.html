@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/solarized.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown  data-background-image="images/ai-blur-codes-577585.jpg" class="box white">
+            <textarea data-template >
+                ## Clean Code Development
+
+                *by Björn Heneka*
+            </textarea>
+        </section>
+        <section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Das Wertesystem
+
+                    * Evolvierbargkeit
+                    * Korrektheit
+                    * Produktionseffizienz
+                    * Kontinuierliche Verbesserung
+                </textarea>
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Evolvierbargkeit
+                    *Je einfacher die Software an geänderte Rahmenbedingungen angepasst werden kann, desto höher ist ihre Evolvierbarkeit.*
+                    <aside data-markdown class="notes">
+                        - Eine Klasse eine Verantwortung
+                        - Einfache erweiterbarkeit
+                        - Lesbar
+                        - Muss von Anfang an berücksichtigt werden
+                    </aside>
+                </textarea>
+
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Korrektheit
+
+                    *Software muss funktional und nicht-funktional korrekt sein.*
+
+
+                    <aside data-markdown class="notes">
+                        Funktional: 1+1=2
+                        Nicht funktional:
+                        Speicherauslastung, Performance etc.
+
+                        Anforderungen sollten von vorne klar
+                        sein um korrekt zu entwickeln
+                    </aside>
+                </textarea>
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Produktionseffizienz
+
+                    *Das Verhältnis zwischen Korrektheit und Dauer oder auch gesunder Prakmatismus*
+                    <aside data-markdown class="notes">
+                        Manuelle Arbeitsschritte vermeiden
+
+                        Automate where you can
+
+                        Ständiges nachbessern vermeiden
+
+                        Klare Ziele
+                    </aside>
+                </textarea>
+            </section>
+
+            <section data-markdown>
+                <textarea data-template>
+                    ## Kontinuierliche Verbesserung
+
+                    *Ohne Reflexion keine Weiterentwicklung*
+                </textarea>
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Was nun?
+                    <p class="fragment" data-fragment-index="1">3 Wochen Rhythmus</p>
+                    <p class="fragment" data-fragment-index="2">6 Grade</p>
+                    <p class="fragment" data-fragment-index="3">Start Heute mit dem [ Roten Grad](RedGrade/index.html)</p>
+                    <aside data-markdown class="notes">
+                        Rot, Orange, Gelb, Grün, Blau, Weiß....
+                    </aside>
+                </textarea>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+    Reveal.initialize({
+        dependencies: [
+            {src: 'reveal.js/plugin/markdown/marked.js'},
+            {src: 'reveal.js/plugin/markdown/markdown.js'},
+            {src: 'reveal.js/plugin/notes/notes.js', async: true},
+            {
+                src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
