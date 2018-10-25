@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/moon.css">
+    <link rel="stylesheet" href="../css/page.css">
+
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+
+
+
+
+        <!-- START -->
+        <section data-markdown data-background-image="../images/ai-blur-codes-577585.jpg" class="box dark">
+            <textarea data-template>
+                # Clean Code Development
+                Part2
+
+                *by Björn Heneka*
+
+            </textarea>
+        </section>
+
+        <section data-markdown data-background-image="images/blur-cars-clouds-461890.jpg" class="box dark">
+            <textarea data-template>
+                # Was bisher geschah
+            </textarea>
+        </section>
+
+        <section data-markdown data-background-image="../RedGrade/images/ai-art-big-data-158826.jpg" class="box dark">
+            <textarea data-template>
+                ## Prinzipien Roter Grad
+
+                * <p class="fragment" data-fragment-index="1">Don't repeat yourself (DRY)</p>
+                * <p class="fragment" data-fragment-index="2">Keep it simple, stupid (KISS)</p>
+                * <p class="fragment" data-fragment-index="3">Beware of optimisation</p>
+                * <p class="fragment" data-fragment-index="4">Favour Composition over Inheritance (FCoI)</p>
+                * <p class="fragment" data-fragment-index="5">Integration Operation Segregation Principle (IOSP)</p>
+
+                 <aside data-markdown class="notes">
+                    - IOSP Trennung von logik, Kontrollstruktur und reinen Aufrufen
+
+                 </aside>
+            </textarea>
+        </section>
+
+        <section  data-markdown data-background-image="../RedGrade/images/ai-art-big-data-158826.jpg" class="box dark">
+            <textarea data-template>
+                ## Praktiken Roter Grad
+
+                * <p class="fragment" data-fragment-index="1">The Boyscout rule</p>
+                * <p class="fragment" data-fragment-index="2">Root Cause Analysis</p>
+                * <p class="fragment" data-fragment-index="3">Ein Versionskontrollsystem einsetzen</p>
+                * <p class="fragment" data-fragment-index="4">Einfache Refaktorisierungsmuster anwenden</p>
+                * <p class="fragment" data-fragment-index="5">Täglich reflektieren</p>
+            </textarea>
+        </section>
+
+        <!-- START -->
+        <section data-markdown data-background-image="images/breakfast-citrus-cold-1435737.jpg" class="box dark">
+            <textarea data-template>
+                # Der Orange Grad
+            </textarea>
+        </section>
+
+
+
+        <!-- Prinzipien -->
+        <section data-markdown>
+            <textarea data-template>
+                ## Prinzipien
+
+                * <p class="fragment" data-fragment-index="1">Single Level of Abstraction (SLA)</p>
+                * <p class="fragment" data-fragment-index="2">Single Responsibility Principle (SRP)</p>
+                * <p class="fragment" data-fragment-index="3">Separation of Concerns (SoC)</p>
+                * <p class="fragment" data-fragment-index="4">Source Code Konventionen</p>
+            </textarea>
+        </section>
+
+        <!-- Techniken -->
+        <section data-markdown>
+            <textarea data-template>
+                ## Praktiken
+
+                * <p class="fragment" data-fragment-index="1">Issue Tracking</p>
+                * <p class="fragment" data-fragment-index="2">Automatisierte Integrationstests</p>
+                * <p class="fragment" data-fragment-index="3">Lesen, Lesen, Lesen</p>
+                * <p class="fragment" data-fragment-index="4">Reviews</p>
+            </textarea>
+        </section>
+
+        <!-- Prinzipien -->
+        <section data-markdown data-background-image="images/ai-codes-coding-247791.jpg" class="dark box">
+            <textarea data-template>
+                # Prinzipien
+            </textarea>
+        </section>
+
+        <!-- Single Level of Abstraction (SLA) -->
+        <section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Single Level of Abstraction (SLA)
+                    *<p class="fragment" data-fragment-index="1">Die Einhaltung eines Abstraktionsniveaus fördert die Lesbarkeit.</p>*
+                <aside data-markdown class="notes">
+                    - Jede Methode hat ihr eigenes Abstraktionsniveau
+                    - Klassisches Beispiel Verarbeitung vin Daten in schleife
+                    - Innerhalb der Schleife werden daten dann in der gleichen Methode erarbeitet... besser extra Methode zur Verarbeitung
+                </aside>
+                </textarea>
+            </section>
+            <section data-markdown="sla/bad.md">
+            </section>
+            <section data-markdown="sla/good.md">
+            </section>
+        </section>
+
+        <!-- Single Responsibility Principle (SRP) -->
+        <section>
+            <section data-markdown>
+            <textarea data-template>
+                ## Single Responsibility Principle (SRP)
+                *<p class="fragment" data-fragment-index="1">Fokus erleichtert das Verständnis. Eine Klasse mit genau einer Aufgabe ist verständlicher als ein Gemischtwarenladen.</p>*
+                <aside data-markdown class="notes">
+                    - SOLID Prinzip (https://medium.com/prod-io/solid-principles-takeaways-ec0825a07247)
+                    - Eine Klasse soll nur EINE Verantwortlichkeit haben
+                    - Klassen sollen leichter erweiterbar sein.
+                    - Verletzung führt zur Kopplung und
+                    erhöhter Komplexität
+
+                </aside>
+            </textarea>
+            </section>
+            <section data-markdown="srp/bad.md">
+            </section>
+            <section data-markdown="srp/good.md">
+            </section>
+        </section>
+
+        <!-- Separation of Concerns (SoC) -->
+        <section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Separation of Concerns (SoC)
+                    *<p class="fragment" data-fragment-index="1">Wenn eine Codeeinheit keine klare Aufgabe hat ist es schwer sie zu verstehen, sie anzuwenden und sie ggf. zu korrigieren oder zu erweitern.</p>*
+                    <aside data-markdown class="notes">
+                        - Concerns sind eine Übermenge an Responibilities
+                        - Concern ist z.B. die Peristenz, Caching, Logging etc.
+                        - Diese sollten voneinander getrennt sein.
+                        - Businesslogik darf z.B: nicht auf die Peristenz
+                        zugreifen.
+                        - Mehrere Concerns in einer Methode sollten klar
+                        getrennt sein damit man diese erkennt
+                    </aside>
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Code Conventions -->
+        <section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Source Code Konventionen
+                    *<p class="fragment" data-fragment-index="1">Code wird häufiger gelesen als geschrieben. Daher sind Konventionen wichtig, die ein schnelles Lesen und Erfassen des Codes unterstützen.</p>*
+                    <aside data-markdown class="notes">
+                        - Namensregeln
+                        - Richtig Kommentieren
+                    </aside>
+                </textarea>
+            </section>
+            <section data-markdown="convention/bad.md">
+            </section>
+            <section data-markdown="convention/good.md">
+            </section>
+        </section>
+
+        <!-- Praktiken -->
+        <section data-markdown data-background-image="images/ai-codes-coding-247791.jpg" class="dark box">
+            <textarea data-template>
+                # Praktiken
+            </textarea>
+        </section>
+
+        <!--  Issue Tracking -->
+        <section>
+            <section data-markdown data-background-image="images/5ae2b9e4a1776f377a660434_jira-screenshot2.jpg" class="box dark">
+                <textarea data-template>
+                    ## Issue Tracking
+                    *<p class="fragment" data-fragment-index="1">Nur, was man aufschreibt, vergisst man nicht und kann man effektiv delegieren und verfolgen.</p>*
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Automatisierte Integrationstests -->
+        <section>
+            <section data-markdown data-background-image="images/CI.jpg" class="box dark">
+                <textarea data-template>
+                    ## Automatisierte Integrationstests
+                    *<p class="fragment" data-fragment-index="1">Integrationstests stellen sicher dass der Code tut was er soll. Diese wiederkehrende Tätigkeit nicht zu automatisieren wäre Zeitverschwendung.</p>*
+                    <aside data-markdown class="notes">
+                    - Nimmt Angst vor Fehlern, gibt Sicherheut
+                </aside>
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Lesen, Lesen, Lesen -->
+        <section>
+            <section data-markdown data-background-image="images/bookcase-books-bookshop-220326.jpg" class="box dark">
+                <textarea data-template>
+                    ## Lesen, Lesen, Lesen
+                    *<p class="fragment" data-fragment-index="1">Lesen bildet und gefährdet Dummheit!</p>*
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Reviews -->
+        <section>
+            <section data-markdown data-background-image="images/side1.png" class="box dark">
+                <textarea data-template>
+                    ## Reviews
+                    *<p class="fragmet" data-fragment-index="1">Vier Augen sehen mehr als zwei. Wenn der eine Entwickler dem anderen seinen Code erklärt, tauchen meist Details auf, die bislang nicht bedacht wurden.</p>*
+                </textarea>
+            </section>
+            <section data-markdown>
+                <textarea data-template>
+                    ## Beispiele
+
+                    * <p class="fragment" data-fragment-index="1">Methoden extrahieren</p>
+                    * <p class="fragment" data-fragment-index="2">Umbenennungen</p>
+                    * <p class="fragment" data-fragment-index="3">Werkzeuge der IDE nutzen</p>
+
+                </textarea>
+            </section>
+        </section>
+
+        <!-- Thx -->
+        <section data-markdown data-background-image="../images/advertisement-advertising-font-519.jpg">
+        </section>
+
+    </div>
+</div>
+
+<script src="../reveal.js/lib/js/head.min.js"></script>
+<script src="../reveal.js/js/reveal.js"></script>
+
+<script>
+    Reveal.initialize({
+        dependencies: [
+            {src: '../reveal.js/plugin/markdown/marked.js'},
+            {src: '../reveal.js/plugin/markdown/markdown.js'},
+            {src: '../reveal.js/plugin/notes/notes.js', async: true},
+            {
+                src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
